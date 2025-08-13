@@ -1,11 +1,14 @@
 package br.com.senai.jpa.service;
 
+import br.com.senai.jpa.dto.PessoaDto;
+import br.com.senai.jpa.dto.mapper.PessoaMapper;
 import br.com.senai.jpa.model.Pessoa;
 import br.com.senai.jpa.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,38 +18,53 @@ public class PessoaService {
     @Autowired
     private PessoaRepository pessoaRepository;
 
-    public Pessoa salvar(Pessoa pessoa) {
-        if (pessoa.getDocumento() != null) {
-            pessoa.getDocumento().setPessoa(pessoa);
+    public PessoaDto salvar(PessoaDto pessoaDto) {
+        Pessoa pessoa = PessoaMapper.toEntity(pessoaDto);
+        Pessoa salva = pessoaRepository.save(pessoa);
+        return PessoaMapper.toDto(salva);
+    }
+
+    public List<PessoaDto> listarTodas() {
+        List<Pessoa> pessoaEntity = pessoaRepository.findAll();
+        List<PessoaDto> dtos = new ArrayList<>();
+        for (Pessoa pessoa : pessoaEntity) {
+            dtos.add(PessoaMapper.toDto(pessoa));
         }
-        return pessoaRepository.save(pessoa);
+        return dtos;
     }
 
-    public List<Pessoa> listarTodas() {
-        return pessoaRepository.findAll();
-    }
-
-    public Optional<Pessoa> buscarPorId(Long id) {
-        return pessoaRepository.findById(id);
+    public Optional<PessoaDto> buscarPorId(Long id) {
+        return pessoaRepository.findById(id).map(PessoaMapper::toDto);
     }
 
     public void excluir(Long id) {
         pessoaRepository.deleteById(id);
     }
 
-    public Pessoa buscarPorEmail(String email) {
-        return pessoaRepository.findByEmail(email);
+    public PessoaDto buscarPorEmail(String email) {
+        Pessoa pessoa = pessoaRepository.findByEmail(email);
+        return PessoaMapper.toDto(pessoa);
     }
 
-    public List<Pessoa> buscarPorNome(String nome) {
-        return pessoaRepository.findByNomeLike("%" + nome + "%");
+    public List<PessoaDto> buscarPorNome(String nome) {
+       List<Pessoa> pessoasEntity = pessoaRepository.findByNomeLike("%" + nome + "%");
+        List<PessoaDto> dtos = new ArrayList<>();
+        for (Pessoa pessoa : pessoasEntity) {
+            dtos.add(PessoaMapper.toDto(pessoa));
+        }
+        return dtos;
     }
 
-    public List<Pessoa> buscarPorDataNascimentoAntes(LocalDate data) {
-        return pessoaRepository.findPessoasNascidasAntesDe(data);
+    public List<PessoaDto> buscarPorDataNascimentoAntes(LocalDate data) {
+        List<Pessoa> pessoasEntity = pessoaRepository.findPessoasNascidasAntesDe(data);
+        List<PessoaDto> dtos = new ArrayList<>();
+        for (Pessoa pessoa : pessoasEntity) {
+            dtos.add(PessoaMapper.toDto(pessoa));
+        }
+        return dtos;
     }
 
-    public Pessoa buscarPorCpfDoDocumento(String cpf) {
-        return pessoaRepository.findByCpfDoDocumento(cpf);
+    public PessoaDto buscarPorCpfDoDocumento(String cpf) {
+        return PessoaMapper.toDto(pessoaRepository.findByCpfDoDocumento(cpf));
     }
 }
