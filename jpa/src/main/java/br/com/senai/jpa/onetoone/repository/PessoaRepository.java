@@ -1,6 +1,6 @@
-package br.com.senai.jpa.repository;
+package br.com.senai.jpa.onetoone.repository;
 
-import br.com.senai.jpa.model.Pessoa;
+import br.com.senai.jpa.onetoone.model.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

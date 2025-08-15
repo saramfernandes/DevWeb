@@ -1,30 +1,26 @@
-package br.com.senai.jpa.model;
-
-import jakarta.persistence.*;
+package br.com.senai.jpa.onetoone.dto;
 
 import java.time.LocalDate;
 
-@Entity
-public class Pessoa {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PessoaDto {
     private Long id;
     private String nome;
-    @Column(unique = true)
     private String email;
     private LocalDate dataNascimento;
-    @OneToOne(mappedBy = "pessoa", cascade = CascadeType.ALL)
-    private Documento documento;
+    private String cpf;
+    private String rg;
 
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                '}';
+    public PessoaDto() {
     }
 
-
+    public PessoaDto(String nome, String email, LocalDate dataNascimento, String cpf, String rg, Long id) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.dataNascimento = dataNascimento;
+        this.cpf = cpf;
+        this.rg = rg;
+    }
 
     public Long getId() {
         return id;
@@ -58,11 +54,19 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public Documento getDocumento() {
-        return documento;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setDocumento(Documento documento) {
-        this.documento = documento;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
     }
 }

@@ -1,4 +1,4 @@
-package br.com.senai.jpa.dto;
+package br.com.senai.jpa.onetoone.dto;
 
 public class DocumentoDto {
 

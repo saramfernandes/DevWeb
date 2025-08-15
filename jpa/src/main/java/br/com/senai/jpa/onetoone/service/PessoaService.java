@@ -1,9 +1,9 @@
-package br.com.senai.jpa.service;
+package br.com.senai.jpa.onetoone.service;
 
-import br.com.senai.jpa.dto.PessoaDto;
-import br.com.senai.jpa.dto.mapper.PessoaMapper;
-import br.com.senai.jpa.model.Pessoa;
-import br.com.senai.jpa.repository.PessoaRepository;
+import br.com.senai.jpa.onetoone.dto.PessoaDto;
+import br.com.senai.jpa.onetoone.dto.mapper.PessoaMapper;
+import br.com.senai.jpa.onetoone.model.Pessoa;
+import br.com.senai.jpa.onetoone.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

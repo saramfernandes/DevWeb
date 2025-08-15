@@ -1,4 +1,4 @@
-package br.com.senai.jpa.model;
+package br.com.senai.jpa.onetoone.model;
 
 import jakarta.persistence.*;
 

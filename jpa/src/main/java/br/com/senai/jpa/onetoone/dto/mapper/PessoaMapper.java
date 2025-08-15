@@ -1,22 +1,21 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.onetoone.dto.mapper;
 
-import br.com.senai.jpa.dto.DocumentoDto;
-import br.com.senai.jpa.dto.PessoaDto;
-import br.com.senai.jpa.model.Documento;
-import br.com.senai.jpa.model.Pessoa;
+import br.com.senai.jpa.onetoone.dto.PessoaDto;
+import br.com.senai.jpa.onetoone.model.Documento;
+import br.com.senai.jpa.onetoone.model.Pessoa;
 
 public class PessoaMapper {
 
     public static PessoaDto toDto(Pessoa entity) {
         if (entity == null) return null;
-        DocumentoDto documentoDto = DocumentoMapper.toDto(entity.getDocumento());
         return new PessoaDto(
-                entity.getId(),
                 entity.getNome(),
                 entity.getEmail(),
                 entity.getDataNascimento(),
-                documentoDto
-        );
+                entity.getDocumento().getCpf(),
+                entity.getDocumento().getRg(),
+                entity.getId()
+                );
     }
 
     public static Pessoa toEntity(PessoaDto dto) {
@@ -27,7 +26,9 @@ public class PessoaMapper {
         pessoa.setEmail(dto.getEmail());
         pessoa.setDataNascimento(dto.getDataNascimento());
 
-        Documento documento = DocumentoMapper.toEntity(dto.getDocumento());
+        Documento documento = new Documento();
+        documento.setCpf(dto.getCpf());
+        documento.setRg(dto.getRg());
         if (documento != null) documento.setPessoa(pessoa);
         pessoa.setDocumento(documento);
 

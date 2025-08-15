@@ -1,7 +1,7 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.onetoone.dto.mapper;
 
-import br.com.senai.jpa.dto.DocumentoDto;
-import br.com.senai.jpa.model.Documento;
+import br.com.senai.jpa.onetoone.dto.DocumentoDto;
+import br.com.senai.jpa.onetoone.model.Documento;
 
 public class DocumentoMapper {
 

@@ -1,7 +1,7 @@
-package br.com.senai.jpa.controller;
+package br.com.senai.jpa.onetoone.controller;
 
-import br.com.senai.jpa.dto.PessoaDto;
-import br.com.senai.jpa.service.PessoaService;
+import br.com.senai.jpa.onetoone.dto.PessoaDto;
+import br.com.senai.jpa.onetoone.service.PessoaService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
