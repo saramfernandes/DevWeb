@@ -17,10 +17,14 @@ public class AutorService {
         this.repository = repository;
     }
 
-    public AutorDto cadastrar(AutorDto autorDto) {
+    public AutorDto salvar(AutorDto autorDto) {
         Autor autor = AutorMapper.toEntity(autorDto);
         Autor autorNovo = repository.save(autor);
         return AutorMapper.toDto(autorNovo);
+    }
+
+    public void excluir(Long id) {
+        repository.deleteById(id);
     }
 
     public AutorDto buscarPorId(Long id) {
@@ -29,7 +33,8 @@ public class AutorService {
     }
 
     public List<AutorDto> buscarTodos() {
-        List<Autor> autores = repository.findAll();
-        return
+//        List<Autor> autores = repository.findAll();
+//        return autores.stream().map(AutorMapper::toDto).toList();
+        return repository.findAll().stream().map(AutorMapper::toDto).toList();
     }
 }
