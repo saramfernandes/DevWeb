@@ -15,20 +15,6 @@ import java.util.List;
 public class TimeController {
     private int id = 1;
 
-    @GetMapping("/query")
-    public ResponseEntity<TimeDto> buscarPorNome(@RequestParam String nome) {
-        TimeDto timeRetorno = null;
-        for (TimeDto time: BancoDados.times) {
-            if (time.getNome().equalsIgnoreCase(nome)) {
-                timeRetorno = time;
-            }
-        }
-        if (timeRetorno == null) {
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(timeRetorno);
-    }
-
     @PostMapping
     public ResponseEntity<TimeDto> cadastrarTime(@RequestBody TimeDto time) {
         time.setId(id);
@@ -43,6 +29,20 @@ public class TimeController {
         return ResponseEntity.status(HttpStatus.OK).body(BancoDados.times);
     }
 
+    @GetMapping("/query")
+    public ResponseEntity<TimeDto> buscarPorNome(@RequestParam String nome) {
+        TimeDto timeRetorno = null;
+        for (TimeDto time: BancoDados.times) {
+            if (time.getNome().equalsIgnoreCase(nome)) {
+                timeRetorno = time;
+            }
+        }
+        if (timeRetorno == null) {
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(timeRetorno);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<TimeDto> buscarPorId(@PathVariable Integer id) {
         TimeDto timeRetorno = TimeService.buscarPorId(id);
@@ -52,7 +52,7 @@ public class TimeController {
         return ResponseEntity.status(HttpStatus.OK).body(timeRetorno);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<TimeDto> excluir(@PathVariable Integer id) {
         TimeDto timeExcluir = TimeService.buscarPorId(id);
         if (timeExcluir == null) {
@@ -63,7 +63,7 @@ public class TimeController {
         }
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<TimeDto> alterar(@PathVariable Integer id, @RequestBody TimeDto time) {
         TimeDto timeAlterar = TimeService.buscarPorId(id);
         if (timeAlterar == null) {
