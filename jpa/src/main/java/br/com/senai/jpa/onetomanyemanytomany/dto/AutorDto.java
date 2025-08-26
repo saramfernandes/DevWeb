@@ -1,4 +1,4 @@
-package br.com.senai.jpa.onetomany.dto;
+package br.com.senai.jpa.onetomanyemanytomany.dto;
 
 import java.time.LocalDate;
 

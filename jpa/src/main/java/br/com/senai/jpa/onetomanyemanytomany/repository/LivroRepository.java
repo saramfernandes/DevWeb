@@ -1,7 +1,7 @@
-package br.com.senai.jpa.onetomany.repository;
+package br.com.senai.jpa.onetomanyemanytomany.repository;
 
-import br.com.senai.jpa.onetomany.model.Autor;
-import br.com.senai.jpa.onetomany.model.Livro;
+import br.com.senai.jpa.onetomanyemanytomany.model.Autor;
+import br.com.senai.jpa.onetomanyemanytomany.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

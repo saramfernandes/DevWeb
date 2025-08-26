@@ -1,7 +1,7 @@
-package br.com.senai.jpa.onetomany.dto.mapper;
+package br.com.senai.jpa.onetomanyemanytomany.dto.mapper;
 
-import br.com.senai.jpa.onetomany.dto.AutorDto;
-import br.com.senai.jpa.onetomany.model.Autor;
+import br.com.senai.jpa.onetomanyemanytomany.dto.AutorDto;
+import br.com.senai.jpa.onetomanyemanytomany.model.Autor;
 
 public class AutorMapper {
 

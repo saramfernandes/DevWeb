@@ -1,12 +1,12 @@
-package br.com.senai.jpa.onetomany.service;
+package br.com.senai.jpa.onetomanyemanytomany.service;
 
-import br.com.senai.jpa.onetomany.dto.AutorDto;
-import br.com.senai.jpa.onetomany.dto.LivroDto;
-import br.com.senai.jpa.onetomany.dto.mapper.AutorMapper;
-import br.com.senai.jpa.onetomany.dto.mapper.LivroMapper;
-import br.com.senai.jpa.onetomany.model.Autor;
-import br.com.senai.jpa.onetomany.model.Livro;
-import br.com.senai.jpa.onetomany.repository.LivroRepository;
+import br.com.senai.jpa.onetomanyemanytomany.dto.AutorDto;
+import br.com.senai.jpa.onetomanyemanytomany.dto.LivroDto;
+import br.com.senai.jpa.onetomanyemanytomany.dto.mapper.AutorMapper;
+import br.com.senai.jpa.onetomanyemanytomany.dto.mapper.LivroMapper;
+import br.com.senai.jpa.onetomanyemanytomany.model.Autor;
+import br.com.senai.jpa.onetomanyemanytomany.model.Livro;
+import br.com.senai.jpa.onetomanyemanytomany.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

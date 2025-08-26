@@ -1,7 +1,7 @@
-package br.com.senai.jpa.onetomany.dto.mapper;
+package br.com.senai.jpa.onetomanyemanytomany.dto.mapper;
 
-import br.com.senai.jpa.onetomany.dto.LivroDto;
-import br.com.senai.jpa.onetomany.model.Livro;
+import br.com.senai.jpa.onetomanyemanytomany.dto.LivroDto;
+import br.com.senai.jpa.onetomanyemanytomany.model.Livro;
 
 public class LivroMapper {
 
@@ -13,7 +13,8 @@ public class LivroMapper {
                 livro.getIsbn(),
                 livro.getPaginas(),
                 livro.getPreco(),
-                AutorMapper.toDto(livro.getAutor())
+                AutorMapper.toDto(livro.getAutor()),
+                livro.getCategorias().stream().map(CategoriaMapper::toDto).toList()
         );
     }
 

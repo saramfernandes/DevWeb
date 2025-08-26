@@ -1,7 +1,7 @@
-package br.com.senai.jpa.onetomany.controller;
+package br.com.senai.jpa.onetomanyemanytomany.controller;
 
-import br.com.senai.jpa.onetomany.dto.AutorDto;
-import br.com.senai.jpa.onetomany.service.AutorService;
+import br.com.senai.jpa.onetomanyemanytomany.dto.AutorDto;
+import br.com.senai.jpa.onetomanyemanytomany.service.AutorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

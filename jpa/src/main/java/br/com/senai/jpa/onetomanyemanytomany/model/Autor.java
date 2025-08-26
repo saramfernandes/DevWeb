@@ -1,4 +1,4 @@
-package br.com.senai.jpa.onetomany.model;
+package br.com.senai.jpa.onetomanyemanytomany.model;
 
 import jakarta.persistence.*;
 
