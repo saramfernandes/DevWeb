@@ -56,6 +56,7 @@ public class LivroController {
         return ResponseEntity.noContent().build();
     }
 
+
     @GetMapping("/autor/{id}")
     public ResponseEntity<List<LivroDto>> buscarPorAutor(@PathVariable Long id) {
         AutorDto autorDto = autorService.buscarPorId(id);

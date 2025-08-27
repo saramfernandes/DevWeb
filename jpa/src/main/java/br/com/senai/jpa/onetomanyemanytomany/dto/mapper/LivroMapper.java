@@ -27,6 +27,7 @@ public class LivroMapper {
         livro.setPaginas(livroDto.getPaginas());
         livro.setPreco(livroDto.getPreco());
         livro.setAutor(AutorMapper.toEntity(livroDto.getAutor()));
+        livro.setCategorias(livroDto.getCategorias().stream().map(CategoriaMapper::toEntity).toList());
         return livro;
     }
 }
