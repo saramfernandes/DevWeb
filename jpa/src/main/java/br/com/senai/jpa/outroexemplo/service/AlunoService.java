@@ -1,18 +1,20 @@
-package br.com.senai.jpa.service;
+package br.com.senai.jpa.outroexemplo.service;
 
-import br.com.senai.jpa.dto.AlunoDto;
-import br.com.senai.jpa.dto.mapper.AlunoMapper;
-import br.com.senai.jpa.model.Aluno;
-import br.com.senai.jpa.repository.AlunoRepository;
+
+import br.com.senai.jpa.outroexemplo.dto.AlunoDto;
+import br.com.senai.jpa.outroexemplo.dto.mapper.AlunoMapper;
+import br.com.senai.jpa.outroexemplo.model.Aluno;
+import br.com.senai.jpa.outroexemplo.repository.AlunoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AlunoService {
 
-    private final AlunoRepository alunoRepository;
+    @Autowired
+    private AlunoRepository alunoRepository;
 
     public AlunoService(AlunoRepository alunoRepository) {
         this.alunoRepository = alunoRepository;
@@ -28,9 +30,9 @@ public class AlunoService {
         return alunos.stream().map(AlunoMapper::toDto).toList();
     }
 
-    public Optional<AlunoDto> buscarPorId(Long id) {
-        Optional<Aluno> aluno = alunoRepository.findById(id);
-        return aluno.map(AlunoMapper::toDto);
+    public AlunoDto buscarPorId(Long id) {
+        Aluno aluno = alunoRepository.findById(id).get();
+        return AlunoMapper.toDto(aluno);
     }
 
     public void excluir(Long id) {

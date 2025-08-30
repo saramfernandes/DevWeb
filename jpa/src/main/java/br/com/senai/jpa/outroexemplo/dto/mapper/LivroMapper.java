@@ -1,7 +1,8 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.outroexemplo.dto.mapper;
 
-import br.com.senai.jpa.dto.LivroDto;
-import br.com.senai.jpa.model.Livro;
+
+import br.com.senai.jpa.outroexemplo.dto.LivroDto;
+import br.com.senai.jpa.outroexemplo.model.Livro;
 
 public class LivroMapper {
 

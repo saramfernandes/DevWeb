@@ -1,10 +1,8 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.outroexemplo.dto.mapper;
 
-import br.com.senai.jpa.dto.CategoriaDto;
-import br.com.senai.jpa.model.Categoria;
 
-import java.util.ArrayList;
-import java.util.List;
+import br.com.senai.jpa.outroexemplo.dto.CategoriaDto;
+import br.com.senai.jpa.outroexemplo.model.Categoria;
 
 public class CategoriaMapper {
 

@@ -1,10 +1,11 @@
-package br.com.senai.jpa.service;
+package br.com.senai.jpa.outroexemplo.service;
 
-import br.com.senai.jpa.dto.AutorDto;
-import br.com.senai.jpa.dto.mapper.AutorMapper;
-import br.com.senai.jpa.model.Autor;
-import br.com.senai.jpa.repository.AutorRepository;
+import br.com.senai.jpa.outroexemplo.dto.AutorDto;
+import br.com.senai.jpa.outroexemplo.dto.mapper.AutorMapper;
+import br.com.senai.jpa.outroexemplo.model.Autor;
+import br.com.senai.jpa.outroexemplo.repository.AutorRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package br.com.senai.jpa.model;
+package br.com.senai.jpa.outroexemplo.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

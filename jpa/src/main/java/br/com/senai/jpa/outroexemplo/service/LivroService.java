@@ -1,15 +1,15 @@
-package br.com.senai.jpa.service;
+package br.com.senai.jpa.outroexemplo.service;
 
-import br.com.senai.jpa.dto.AutorDto;
-import br.com.senai.jpa.dto.LivroDto;
-import br.com.senai.jpa.dto.mapper.AutorMapper;
-import br.com.senai.jpa.dto.mapper.LivroMapper;
-import br.com.senai.jpa.model.Livro;
-import br.com.senai.jpa.repository.LivroRepository;
+
+import br.com.senai.jpa.outroexemplo.dto.AutorDto;
+import br.com.senai.jpa.outroexemplo.dto.LivroDto;
+import br.com.senai.jpa.outroexemplo.dto.mapper.AutorMapper;
+import br.com.senai.jpa.outroexemplo.dto.mapper.LivroMapper;
+import br.com.senai.jpa.outroexemplo.model.Livro;
+import br.com.senai.jpa.outroexemplo.repository.LivroRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class LivroService {

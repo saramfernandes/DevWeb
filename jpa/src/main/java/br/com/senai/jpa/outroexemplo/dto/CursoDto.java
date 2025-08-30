@@ -1,6 +1,6 @@
-package br.com.senai.jpa.dto;
+package br.com.senai.jpa.outroexemplo.dto;
 
-import br.com.senai.jpa.model.Matricula;
+import br.com.senai.jpa.outroexemplo.model.Matricula;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

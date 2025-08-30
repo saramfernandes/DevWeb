@@ -1,7 +1,7 @@
-package br.com.senai.jpa.controller;
+package br.com.senai.jpa.outroexemplo.controller;
 
-import br.com.senai.jpa.dto.CursoDto;
-import br.com.senai.jpa.service.CursoService;
+import br.com.senai.jpa.outroexemplo.dto.CursoDto;
+import br.com.senai.jpa.outroexemplo.service.CursoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +34,7 @@ public class CursoController {
     @GetMapping("/{id}")
     public ResponseEntity<CursoDto> buscarPorId(@PathVariable Long id) {
         return cursoService.buscarPorId(id)
-                .map(ResponseEntity::ok)
+                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 

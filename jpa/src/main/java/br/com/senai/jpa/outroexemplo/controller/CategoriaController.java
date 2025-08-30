@@ -1,7 +1,7 @@
-package br.com.senai.jpa.controller;
+package br.com.senai.jpa.outroexemplo.controller;
 
-import br.com.senai.jpa.dto.CategoriaDto;
-import br.com.senai.jpa.service.CategoriaService;
+import br.com.senai.jpa.outroexemplo.dto.CategoriaDto;
+import br.com.senai.jpa.outroexemplo.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

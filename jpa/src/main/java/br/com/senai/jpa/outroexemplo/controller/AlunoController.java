@@ -1,9 +1,8 @@
-package br.com.senai.jpa.controller;
+package br.com.senai.jpa.outroexemplo.controller;
 
-import br.com.senai.jpa.dto.AlunoDto;
-import br.com.senai.jpa.dto.CursoDto;
-import br.com.senai.jpa.service.AlunoService;
-import br.com.senai.jpa.service.CursoService;
+
+import br.com.senai.jpa.outroexemplo.dto.AlunoDto;
+import br.com.senai.jpa.outroexemplo.service.AlunoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

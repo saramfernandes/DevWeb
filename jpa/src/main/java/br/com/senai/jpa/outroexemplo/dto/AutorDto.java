@@ -1,4 +1,4 @@
-package br.com.senai.jpa.dto;
+package br.com.senai.jpa.outroexemplo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

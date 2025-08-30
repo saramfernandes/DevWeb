@@ -1,9 +1,9 @@
-package br.com.senai.jpa.service;
+package br.com.senai.jpa.outroexemplo.service;
 
-import br.com.senai.jpa.dto.CategoriaDto;
-import br.com.senai.jpa.dto.mapper.CategoriaMapper;
-import br.com.senai.jpa.model.Categoria;
-import br.com.senai.jpa.repository.CategoriaRepository;
+import br.com.senai.jpa.outroexemplo.dto.CategoriaDto;
+import br.com.senai.jpa.outroexemplo.dto.mapper.CategoriaMapper;
+import br.com.senai.jpa.outroexemplo.model.Categoria;
+import br.com.senai.jpa.outroexemplo.repository.CategoriaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

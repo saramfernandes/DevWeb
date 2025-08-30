@@ -1,7 +1,8 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.outroexemplo.dto.mapper;
 
-import br.com.senai.jpa.dto.AutorDto;
-import br.com.senai.jpa.model.Autor;
+
+import br.com.senai.jpa.outroexemplo.dto.AutorDto;
+import br.com.senai.jpa.outroexemplo.model.Autor;
 
 public class AutorMapper {
 

@@ -1,5 +1,6 @@
-package br.com.senai.jpa.model;
+package br.com.senai.jpa.outroexemplo.model;
 
+import br.com.senai.jpa.outroexemplo.model.ids.AlunoCursoId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

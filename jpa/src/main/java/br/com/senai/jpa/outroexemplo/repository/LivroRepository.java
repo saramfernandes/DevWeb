@@ -1,7 +1,8 @@
-package br.com.senai.jpa.repository;
+package br.com.senai.jpa.outroexemplo.repository;
 
-import br.com.senai.jpa.model.Autor;
-import br.com.senai.jpa.model.Livro;
+
+import br.com.senai.jpa.outroexemplo.model.Autor;
+import br.com.senai.jpa.outroexemplo.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

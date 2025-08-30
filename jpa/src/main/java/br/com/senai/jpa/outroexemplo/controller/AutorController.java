@@ -1,7 +1,7 @@
-package br.com.senai.jpa.controller;
+package br.com.senai.jpa.outroexemplo.controller;
 
-import br.com.senai.jpa.dto.AutorDto;
-import br.com.senai.jpa.service.AutorService;
+import br.com.senai.jpa.outroexemplo.dto.AutorDto;
+import br.com.senai.jpa.outroexemplo.service.AutorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

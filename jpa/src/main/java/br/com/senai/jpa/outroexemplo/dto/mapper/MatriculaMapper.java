@@ -1,9 +1,8 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.outroexemplo.dto.mapper;
 
-import br.com.senai.jpa.dto.CursoDto;
-import br.com.senai.jpa.dto.MatriculaDto;
-import br.com.senai.jpa.model.Curso;
-import br.com.senai.jpa.model.Matricula;
+
+import br.com.senai.jpa.outroexemplo.dto.MatriculaDto;
+import br.com.senai.jpa.outroexemplo.model.Matricula;
 
 public class MatriculaMapper {
 

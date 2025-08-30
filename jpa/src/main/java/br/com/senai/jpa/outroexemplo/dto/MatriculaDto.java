@@ -1,8 +1,9 @@
-package br.com.senai.jpa.dto;
+package br.com.senai.jpa.outroexemplo.dto;
 
-import br.com.senai.jpa.model.Aluno;
-import br.com.senai.jpa.model.AlunoCursoId;
-import br.com.senai.jpa.model.Curso;
+
+import br.com.senai.jpa.outroexemplo.model.Aluno;
+import br.com.senai.jpa.outroexemplo.model.Curso;
+import br.com.senai.jpa.outroexemplo.model.ids.AlunoCursoId;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,8 @@
-package br.com.senai.jpa.dto.mapper;
+package br.com.senai.jpa.outroexemplo.dto.mapper;
 
-import br.com.senai.jpa.dto.AlunoDto;
-import br.com.senai.jpa.model.Aluno;
+
+import br.com.senai.jpa.outroexemplo.dto.AlunoDto;
+import br.com.senai.jpa.outroexemplo.model.Aluno;
 
 public class AlunoMapper {
 

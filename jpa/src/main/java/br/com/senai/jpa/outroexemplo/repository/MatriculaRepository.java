@@ -1,7 +1,8 @@
-package br.com.senai.jpa.repository;
+package br.com.senai.jpa.outroexemplo.repository;
 
-import br.com.senai.jpa.model.Matricula;
-import br.com.senai.jpa.model.AlunoCursoId;
+
+import br.com.senai.jpa.outroexemplo.model.Matricula;
+import br.com.senai.jpa.outroexemplo.model.ids.AlunoCursoId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
