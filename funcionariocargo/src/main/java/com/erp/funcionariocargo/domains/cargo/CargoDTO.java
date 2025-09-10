@@ -1,6 +1,5 @@
-package br.com.senai.funcionario.dto;
+package com.erp.funcionariocargo.domains.cargo;
 
-import br.com.senai.funcionario.model.Cargo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,8 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class FuncionarioDto {
+public class CargoDTO {
     private Long id;
     private String nome;
-    private Cargo cargo;
+    private Double salario;
 }

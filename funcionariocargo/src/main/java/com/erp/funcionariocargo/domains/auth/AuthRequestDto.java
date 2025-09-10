@@ -1,4 +1,4 @@
-package br.com.senai.funcionario.dto;
+package com.erp.funcionariocargo.domains.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CargoDto {
-    private Long id;
-    private String nome;
-    private Double salario;
+public class AuthRequestDto {
+    private String username;
+    private String password;
 }
